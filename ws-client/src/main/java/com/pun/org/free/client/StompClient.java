@@ -11,7 +11,7 @@ import java.util.Scanner;
 @Slf4j
 public class StompClient {
 
-    private static String URL = "ws://localhost:9090/gs-guide-websocket";
+    private static String URL = "ws://localhost:8282/gs-guide-websocket";
 
     public static void main(String[] args) {
         WebSocketClient client = new StandardWebSocketClient();

@@ -22,8 +22,4 @@ spring:
         - id: ws-server
           uri: lb://ws-server # netflix eureka correspondent service
           predicates:
-            - Path=/client/** # how we will map the url to the target service
-        - id: address-service
-          uri: lb://address-service
-          predicates:
-            - Path=/address/**
+            - After=2022-01-20T17:42:47.789-07:00[America/Denver]
