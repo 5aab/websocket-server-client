@@ -8,6 +8,7 @@
 		<module>ws-gateway</module>
 		<module>ws-client</module>
         <module>ws-auth</module>
+        <module>ws-registry</module>
     </modules>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
