@@ -1,0 +1,6 @@
+server:
+  port: 8760
+eureka:
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
