@@ -8,6 +8,7 @@ server:
 eureka:
   client:
     serviceUrl:
-      defaultZone: ${EUREKA_URI:http://localhost:8760/eureka}
+      defaultZone: ${EUREKA_URI:http://localhost:8888/eureka}
   instance:
     preferIpAddress: true
+

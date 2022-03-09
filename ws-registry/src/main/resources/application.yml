@@ -1,5 +1,5 @@
 server:
-  port: 8760
+  port: 8888
 eureka:
   client:
     registerWithEureka: false

@@ -1,5 +1,5 @@
 server:
-  port: 8282
+  port: 8760
 
 eureka:
   instance:
@@ -8,7 +8,7 @@ eureka:
     register-with-eureka: true # register him self at eureka
     fetch-registry: true # pull down a local copy of the registries
     service-url:
-      defaultZone: http://localhost:8760/eureka # discovery service location
+      defaultZone: http://localhost:8888/eureka # discovery service location
 
 spring:
   application:
