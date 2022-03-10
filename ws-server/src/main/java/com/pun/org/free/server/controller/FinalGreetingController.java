@@ -10,10 +10,11 @@ import org.springframework.messaging.handler.annotation.SendTo;
 import org.springframework.messaging.simp.SimpMessageHeaderAccessor;
 import org.springframework.messaging.simp.SimpMessageSendingOperations;
 import org.springframework.scheduling.annotation.Scheduled;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
+import org.springframework.security.oauth2.jwt.Jwt;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.util.HtmlUtils;
 
-import java.security.Principal;
 import java.util.Collections;
 
 @Slf4j
@@ -27,7 +28,7 @@ public class FinalGreetingController {
 
     @MessageMapping("/confirm")
     @SendTo("/queue/reply")
-    public Greeting greeting(HelloMessage message, Principal principal, SimpMessageHeaderAccessor headerAccessor) throws Exception {
+    public Greeting greeting(HelloMessage message, @AuthenticationPrincipal Jwt principal, SimpMessageHeaderAccessor headerAccessor) throws Exception {
         sessionId = headerAccessor.getSessionAttributes().get("sessionId").toString();
         log.info("Session Id {}", sessionId);
         log.info("Here is the principle {} {}", principal, headerAccessor);
