@@ -16,7 +16,7 @@ A server client web socket application to demo connection via proxy and using Ke
 <li>Now start service discovery  at port <b>8888</b> by running <i>EurekaServerApplication.java</i></li>
 <li>Start Gateway proxy at port <b>8760</b> by running <i>WebsocketsGatewayApplication.java</i></li>
 <li>Start Zookeeper and Kafka at default port numbers. if you choose to use custom ports, you will need to update same in <u>application.yml</u> of WebSocket Server</li>
-<li>Start Web-Socket Server at port<b>9090</b> by running <i>WebsocketsServerApplication.java</i></li>
+<li>Start Web-Socket Server at port <b>9090</b> by running <i>WebsocketsServerApplication.java</i></li>
 <li>Now start the WebSocket Client by Running <i>StompClient.java</i></li>
 
 <h1>Conclusion</h1>
