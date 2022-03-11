@@ -1,2 +1,32 @@
 server:
   port: 9090
+
+spring:
+  application:
+    name: ws-server
+  jpa:
+    defer-datasource-initialization: true
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:8083/auth/realms/wsauth
+          jwk-set-uri: http://localhost:8083/auth/realms/wsauth/protocol/openid-connect/certs
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:http://localhost:8888/eureka}
+  instance:
+    preferIpAddress: true
+
+keycloak:
+  auth-server-url: http://localhost:8083/auth
+  realm: wsauth
+  resource: wsauth-client
+  public-client: true
+  principal-attribute: wsauth-user
+  security-constraints[0]:
+    authRoles[0]: wsauth-role
+    securityCollections[0]:
+      patterns[0]: /*
