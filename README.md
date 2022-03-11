@@ -1,7 +1,7 @@
-#Websocket Server Client
+<h1>Websocket Server Client</h1>
 A server client web socket application to demo connection via proxy and using Key Clock as identity server
 
-#Steps to start the application
+<h1>Steps to start the application</h1>
 <ol type="1">
   <li>start Identity Server by running <i>AuthorizationServerApp.java</i></li>
   <ol>
@@ -19,7 +19,7 @@ A server client web socket application to demo connection via proxy and using Ke
 <li>Start Web-Socket Server at port<b>9090</b> by running <i>WebsocketsServerApplication.java</i></li>
 <li>Now start the WebSocket Client by Running <i>StompClient.java</i></li>
 
-#Conclusion
+<h1>Conclusion</h1>
 You will be able to see server and clients exchanging messages over web sockets bi-directionally in client's logs
 </ol>
 
